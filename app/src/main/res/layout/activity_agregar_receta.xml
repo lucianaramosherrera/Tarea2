@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/inputNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la receta" />
+
+        <EditText
+            android:id="@+id/inputPreparacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preparación"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar ingredientes"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerIngredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAgregarIngrediente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar desde lista" />
+
+        <EditText
+            android:id="@+id/inputNuevoIngrediente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nuevo ingrediente" />
+
+        <Button
+            android:id="@+id/btnAgregarNuevoIngrediente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar nuevo ingrediente" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionados:"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSeleccionados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:id="@+id/btnGuardarReceta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar receta"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
